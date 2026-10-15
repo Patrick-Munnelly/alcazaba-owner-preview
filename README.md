@@ -13,12 +13,14 @@ Live preview: https://patrick-munnelly.github.io/alcazaba-owner-preview/ (rebuil
 | `documents.html` | Newsletters and AGM results (`?tab=agm` opens the AGM tab) |
 | `chat.html` | Office chat (assistant first, office takes over) |
 | `community.html` | Community wall, moderated by the office |
-| `coming-soon.html` | Placeholder for screens not designed yet (`?page=orders`, `restaurant`, `account`, `app`, `download`, `archive`, `conversation`, `forgot`) |
+| `account.html` | Your account (template owner: John Doe, Block A · Apartment 12) |
+| `coming-soon.html` | Placeholder for screens not designed yet (`?page=orders`, `app`, `download`, `archive`, `conversation`, `forgot`, `password`) |
 
 ## Shared files
 
 - `assets/css/styles.css`: all styles. Colours and fonts are set once at the top under `:root`.
 - `assets/js/app.js`: language switch, Documents tabs, the phone "More" menu and the coming-soon page.
+- `assets/img/al_beach_logo.png`: the Alcazaba Beach logo used in the header and on the sign-in page.
 - `assets/js/i18n.js`: Spanish copy. English is written in the HTML; each translated element has a `data-i18n` key that matches an entry here.
 
 ## Notes
