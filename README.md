@@ -2,6 +2,8 @@
 
 Static HTML mockup of the owners' area. Open `index.html` in a browser to start at the sign-in page; every button and link moves between the pages.
 
+Live preview: https://patrick-munnelly.github.io/alcazaba-owner-preview/ (rebuilt from `main` on every push).
+
 ## Pages
 
 | File | Screen |
