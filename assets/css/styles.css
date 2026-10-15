@@ -22,6 +22,7 @@
   --warn-bg: #FBE6D6;
   --warn-ink: #8A3D0E;
   --focus: #7FB9D3;
+  --heart: #D1495B;
   --accent: var(--sea);
 
   --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -64,7 +65,7 @@ img, svg { display: block; }
 }
 .icon--sm { width: 16px; height: 16px; stroke-width: 2.2; }
 .icon--lg { width: 24px; height: 24px; }
-.logo { width: 36px; height: 36px; flex: none; color: var(--sea); --logo-wave: #7FB9D3; }
+.logo { width: auto; height: 54px; flex: none; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -77,7 +78,6 @@ img, svg { display: block; }
   display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px;
 }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand-name { font-family: var(--font-display); font-size: 23px; color: var(--sea-deep); white-space: nowrap; }
 .main-nav { display: flex; flex-wrap: wrap; gap: 4px; flex: 1 1 520px; }
 .nav-link {
   display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px;
@@ -103,6 +103,7 @@ img, svg { display: block; }
   background: var(--sky); color: var(--sea-deep); text-decoration: none;
 }
 .account-btn:hover { background: #BBDDEC; color: var(--sea-deep); }
+.account-btn[aria-current="page"] { background: var(--sea); color: #fff; }
 
 /* ---------- Layout ---------- */
 .container {
@@ -211,8 +212,7 @@ img, svg { display: block; }
   background: var(--sea); color: #fff;
   display: flex; flex-direction: column; gap: 40px;
 }
-.login-hero .logo { width: 40px; height: 40px; color: #fff; --logo-wave: #9FD0E6; }
-.login-hero .brand-name { color: #fff; font-size: 26px; }
+.login-hero .logo { height: 64px; }
 .login-hero .eyebrow { color: var(--sky); letter-spacing: 0.12em; }
 .login-title { font-family: var(--font-display); font-weight: 400; font-size: 52px; line-height: 1.08; }
 .login-intro { max-width: 480px; display: flex; flex-direction: column; gap: 16px; }
@@ -260,6 +260,7 @@ img, svg { display: block; }
 .avatar--office { background: var(--sand-pill); color: var(--sand-ink); }
 .avatar--sea { background: var(--sea); color: #fff; }
 .avatar--lg { flex-basis: 44px; width: 44px; height: 44px; }
+.avatar--xl { flex-basis: 72px; width: 72px; height: 72px; font-size: 24px; }
 .avatar--sm { flex-basis: 36px; width: 36px; height: 36px; font-size: 13px; }
 .quick-link {
   display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: 16px;
@@ -412,12 +413,24 @@ img, svg { display: block; }
 /* Pages reached before signing in hide the owners' navigation */
 .is-public .main-nav, .is-public .account-btn, .is-public .tab-bar, .is-public .more-sheet { display: none !important; }
 
+/* ---------- Community wall likes ---------- */
+.like-btn[aria-pressed="true"], .like-btn[aria-pressed="true"]:hover { color: var(--heart); }
+.like-btn[aria-pressed="true"] .icon { fill: currentColor; }
+
+/* ---------- Your account ---------- */
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.field--wide { grid-column: 1 / -1; }
+.details { margin: 0; display: flex; flex-direction: column; }
+.details div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+.details div:last-child { border-bottom: 0; }
+.details dt { font-size: 14px; color: var(--muted); }
+.details dd { margin: 0; font-size: 15px; font-weight: 700; }
+
 /* ---------- Phone ---------- */
 @media (max-width: 760px) {
   .main-nav, .account-btn { display: none; }
   .header-inner { padding: 10px 16px; flex-wrap: nowrap; }
-  .logo { width: 30px; height: 30px; }
-  .brand-name { font-size: 20px; }
+  .logo { height: 44px; }
   .lang-btn { height: 38px; font-size: 12px; }
 
   .container { padding: 20px 16px 120px; gap: 18px; }
@@ -437,6 +450,7 @@ img, svg { display: block; }
   /* Login */
   .login-hero { padding: 24px 20px 28px; gap: 24px; }
   .login-title { font-size: 34px; }
+  .login-hero .logo { height: 50px; }
   .login-intro p { font-size: 16px; }
   .photo-placeholder { min-height: 150px; }
   .login-side { padding: 20px; gap: 24px; }

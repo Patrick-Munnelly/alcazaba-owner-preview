@@ -2,6 +2,7 @@
    - EN/ES language switch (remembered across pages)
    - Tabs on the Documents page
    - "More" menu on phones
+   - Like (heart) buttons on the community wall
    - Coming-soon page content */
 (function () {
   'use strict';
@@ -32,8 +33,7 @@
   /* ---------- Coming-soon page ---------- */
   var SOON_PAGES = {
     orders: { icon: 'i-bag', title: 'Orders from the office', text: 'Request items from the office here. You pay in the office, as you do today.' },
-    restaurant: { icon: 'i-utensils', title: 'Restaurant bookings', text: 'Request a table at the restaurant and see the status of your bookings.' },
-    account: { icon: 'i-user', title: 'Your account', text: 'Update your contact details, password and notification settings.' },
+    password: { icon: 'i-user', title: 'Change your password', text: 'Enter your current password, then choose a new one.' },
     app: { icon: 'i-phone', title: 'The Alcazaba Beach app', text: 'Download links for iPhone and Android will go here.' },
     download: { icon: 'i-download', title: 'Document download', text: 'On the live site this opens or downloads the PDF.' },
     archive: { icon: 'i-doc', title: 'Document archive', text: 'Older newsletters and AGM papers, organised by year.' },
@@ -212,6 +212,15 @@
     });
   }
 
+  /* ---------- Like buttons ---------- */
+  function setupLikes() {
+    document.querySelectorAll('.like-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        btn.setAttribute('aria-pressed', btn.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+      });
+    });
+  }
+
   /* ---------- Active navigation ---------- */
   function markCurrentNav() {
     var current = document.body.getAttribute('data-page');
@@ -224,13 +233,14 @@
   /* ---------- Start ---------- */
   document.addEventListener('DOMContentLoaded', function () {
     var soonPage = params().get('page');
-    if (soonPage === 'orders' || soonPage === 'restaurant') document.body.setAttribute('data-page', soonPage);
+    if (soonPage === 'orders') document.body.setAttribute('data-page', soonPage);
     markCurrentNav();
     setupComingSoon();
     rememberEnglish();
     setupLangToggle();
     setupTabs();
     setupMoreMenu();
+    setupLikes();
     applyLang(currentLang());
   });
 })();
