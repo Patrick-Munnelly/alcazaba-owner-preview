@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <title data-i18n="title.account">Your account · Alcazaba Beach owners' area</title>
 </head>
@@ -62,18 +62,19 @@
     </div>
   </div>
 </header>
-<main id="main" class="container">
-
-  <div class="page-head page-head--split">
-    <div class="cluster" style="gap: 18px">
+<section class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-person">
       <span class="avatar avatar--xl" aria-hidden="true">JD</span>
-      <div class="stack stack--sm">
-        <p class="meta strong" data-i18n="account.unit">Block A · Apartment 12 · Owner since 2019</p>
-        <h1 class="h1">John Doe</h1>
+      <div class="hero-text">
+        <p class="hero-kicker" data-i18n="account.unit">Block A · Apartment 12 · Owner since 2019</p>
+        <h1 class="hero-title">John Doe</h1>
       </div>
     </div>
-    <a class="btn btn--outline" href="index.html"><svg class="icon" aria-hidden="true"><use href="#i-logout"></use></svg><span data-i18n="nav.signOut">Sign out</span></a>
+    <a class="btn btn--ghost-light" href="index.html"><svg class="icon" aria-hidden="true"><use href="#i-logout"></use></svg><span data-i18n="nav.signOut">Sign out</span></a>
   </div>
+</section>
+<main id="main" class="container">
 
   <div class="row">
     <div class="stack grow-main">
@@ -154,6 +155,38 @@
     </aside>
   </div>
 </main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="logo" src="assets/img/al_beach_logo.png" alt="Alcazaba Beach" width="224" height="79">
+        <p data-i18n="footer.about">A landmark residential community on Estepona's New Golden Mile: 380 apartments in award-winning gardens by the Mediterranean.</p>
+      </div>
+      <div class="footer-nav">
+        <h2 class="footer-title" data-i18n="nav.label">Owners' area</h2>
+        <ul>
+          <li><a href="home.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+          <li><a href="chat.html" data-i18n="nav.chat">Office chat</a></li>
+          <li><a href="community.html" data-i18n="nav.community">Community</a></li>
+          <li><a href="account.html" data-i18n="common.account">Your account</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-title" data-i18n="footer.contact">Contact</h2>
+        <ul>
+          <li>Calle del Mare Nostrum<br>Carretera C&aacute;diz-M&aacute;laga, km 158<br>29680 Estepona, M&aacute;laga</li>
+          <li><a href="tel:+34952790819">952 790 819</a> &middot; <a href="tel:+34952793223">952 793 223</a></li>
+          <li><a href="mailto:admin@alcazababeach.com">admin@alcazababeach.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">&copy; 2026 Comunidad de Propietarios Alcazaba Beach. All rights reserved.</span>
+      <a class="footer-signout" href="index.html" data-i18n="nav.signOut">Sign out</a>
+    </div>
+  </div>
+</footer>
 <nav class="tab-bar" aria-label="Owners' area" data-i18n-aria-label="nav.label">
   <a class="tab-item" data-nav="home" href="home.html"><span class="tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span><span data-i18n="nav.home">Home</span></a>
   <a class="tab-item" data-nav="documents" href="documents.html"><span class="tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-doc"></use></svg></span><span data-i18n="nav.documents">Documents</span></a>
