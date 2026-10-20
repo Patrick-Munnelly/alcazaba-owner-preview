@@ -3,7 +3,8 @@
    - Tabs on the Documents page
    - "More" menu on phones
    - Like (heart) buttons on the community wall
-   - Coming-soon page content */
+   - Coming-soon page content
+   - Header that turns white on scroll, and cards that fade in */
 (function () {
   'use strict';
 
@@ -221,6 +222,28 @@
     });
   }
 
+  /* ---------- Header: transparent over the hero, white once scrolled ---------- */
+  function setupHeader() {
+    var header = document.querySelector('.site-header');
+    if (!header) return;
+    function update() { header.classList.toggle('scrolled', window.scrollY > 24); }
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
+  /* ---------- Cards fade in as they scroll into view ---------- */
+  function setupReveal() {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var items = document.querySelectorAll('main .card, main .quick-link, main .list, main .archive');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  }
+
   /* ---------- Active navigation ---------- */
   function markCurrentNav() {
     var current = document.body.getAttribute('data-page');
@@ -241,6 +264,8 @@
     setupTabs();
     setupMoreMenu();
     setupLikes();
+    setupHeader();
+    setupReveal();
     applyLang(currentLang());
   });
 })();
