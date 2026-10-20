@@ -34,3 +34,4 @@ Live preview: https://patrick-munnelly.github.io/alcazaba-owner-preview/ (rebuil
 - Posts and chat messages written by owners or staff stay in the language they were written in.
 - Text in [brackets] is placeholder content to replace with real details.
 - Fonts load from Google Fonts, so they need an internet connection; everything else works offline.
+- Every page links the CSS and JS with `?v=<date>`. When you change `styles.css`, `app.js` or `i18n.js`, update that date on all pages so browsers fetch the new files instead of a cached copy.
