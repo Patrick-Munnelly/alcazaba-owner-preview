@@ -57,7 +57,6 @@ window.ALCAZABA_I18N = {
     'login.remember': 'Mantener la sesión iniciada',
     'login.forgot': '¿Ha olvidado su contraseña?',
     'login.help': '¿Es nuevo propietario o no puede acceder? Contacte con la oficina en',
-    'login.app': 'Descargue la app de Alcazaba Beach',
 
     /* Home */
     'home.unit': 'Bloque A · Apartamento 12',

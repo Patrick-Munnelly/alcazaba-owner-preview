@@ -300,7 +300,13 @@ img, svg { display: block; }
 .login-hero {
   position: relative; overflow: hidden;
   flex: 1 1 520px; min-width: 0; padding: 48px 56px 120px;
-  background: var(--hero-bg); color: #fff;
+  /* Photo and overlay from the draft's hero, darker on the left where the text sits */
+  background:
+    linear-gradient(90deg, rgba(6, 26, 37, 0.94) 0%, rgba(8, 34, 47, 0.86) 38%, rgba(10, 42, 57, 0.52) 68%, rgba(12, 50, 66, 0.28) 100%),
+    linear-gradient(180deg, rgba(6, 26, 37, 0.52) 0%, rgba(6, 26, 37, 0.14) 38%, rgba(6, 26, 37, 0.34) 100%),
+    url("../img/login-gardens.jpg") center / cover no-repeat,
+    var(--sea-deep);
+  color: #fff;
   display: flex; flex-direction: column; justify-content: space-between; gap: 48px;
 }
 .login-hero::after {
@@ -321,10 +327,6 @@ img, svg { display: block; }
 .login-main { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; }
 .login-form { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 24px; }
 .rule { height: 1px; background: var(--sand-deep); border: 0; margin: 0; }
-.app-strip {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
-  padding: 20px 24px; border-radius: var(--radius); background: var(--sand); color: var(--sea-deep);
-}
 
 /* ---------- Home ---------- */
 .newsletter { flex-direction: row; flex-wrap: wrap; gap: 28px; }
@@ -616,7 +618,14 @@ img, svg { display: block; }
   .footer-grid, .is-public .footer-grid { grid-template-columns: 1fr; gap: 32px; }
 
   /* Login */
-  .login-hero { padding: 24px 20px 72px; gap: 28px; }
+  .login-hero {
+    padding: 24px 20px 72px; gap: 28px;
+    /* Text spans the full width here, so darken evenly instead of left to right */
+    background:
+      linear-gradient(180deg, rgba(6, 26, 37, 0.7) 0%, rgba(8, 34, 47, 0.78) 100%),
+      url("../img/login-gardens.jpg") center / cover no-repeat,
+      var(--sea-deep);
+  }
   .login-hero::after { height: 70px; }
   .login-title { font-size: 2.2rem; }
   .login-hero .logo { height: 48px; }
