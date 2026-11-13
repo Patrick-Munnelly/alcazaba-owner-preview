@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=2026-10-20">
+<link rel="stylesheet" href="assets/css/styles.css?v=2026-11-13">
 <title data-i18n="title.community">Community wall · Alcazaba Beach owners' area</title>
 </head>
 <body data-page="community">
@@ -38,6 +38,10 @@
 <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
 <symbol id="i-logout" viewBox="0 0 24 24"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5M5 12h11"/></symbol>
 <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></symbol>
+<symbol id="i-news" viewBox="0 0 24 24"><path d="M4 5h13v14a1 1 0 0 0 1 1H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v9a2 2 0 0 1-2 2"/><path d="M7.5 9h6M7.5 12.5h6M7.5 16h4"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17v.5"/></symbol>
 </svg>
 <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
 <header class="site-header">
@@ -47,8 +51,10 @@
     </a>
     <nav class="main-nav" aria-label="Owners' area" data-i18n-aria-label="nav.label">
       <a class="nav-link" data-nav="home" href="home.html" data-i18n="nav.home">Home</a>
+      <a class="nav-link" data-nav="news" href="news.html" data-i18n="nav.news">News</a>
       <a class="nav-link" data-nav="documents" href="documents.html" data-i18n="nav.documents">Documents</a>
-      <a class="nav-link" data-nav="chat" href="chat.html" data-i18n="nav.chat">Office chat</a>
+      <a class="nav-link" data-nav="information" href="information.html" data-i18n="nav.information">Information</a>
+      <a class="nav-link" data-nav="chat" href="chat.html" data-i18n="nav.chatShort">Chat</a>
       <a class="nav-link" data-nav="community" aria-current="page" href="community.html" data-i18n="nav.community">Community</a>
       <a class="nav-link" data-nav="orders" href="coming-soon.html?page=orders" data-i18n="nav.orders">Orders</a>
     </nav>
@@ -68,7 +74,7 @@
     <div class="hero-text">
       <p class="hero-kicker" data-i18n="login.eyebrow">Owners' area</p>
       <h1 class="hero-title" data-i18n="home.wall">Community wall</h1>
-      <p class="hero-lead" data-i18n="wall.intro">News, notices and neighbourly help from owners and the office.</p>
+      <p class="hero-lead" data-i18n="wall.intro">Notices from the office and neighbourly help between owners. The office reviews every post and reply before it appears.</p>
     </div>
   </div>
 </section>
@@ -83,7 +89,7 @@
         <div class="spread">
           <button type="button" class="btn btn--outline btn--sm"><svg class="icon" aria-hidden="true"><use href="#i-image"></use></svg><span data-i18n="wall.addPhoto">Add photo</span></button>
           <div class="cluster" style="gap: 14px">
-            <span class="note" data-i18n="wall.reviewNote">The office reviews posts before they appear.</span>
+            <span class="note" data-i18n="wall.reviewNote">The office reviews every post before it appears.</span>
             <button type="button" class="btn btn--primary btn--sm" data-i18n="wall.post">Post</button>
           </div>
         </div>
@@ -94,7 +100,7 @@
           <span class="strong" data-i18n="wall.yourPost">Your post</span>
           <span class="pill pill--muted"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-clock"></use></svg><span data-i18n="wall.waiting">Waiting for review</span></span>
         </div>
-        <p class="body">Does anyone have a recommendation for a local plumber who speaks English?</p>
+        <p class="body">Has anyone seen a grey cat near Block 12? She hasn't come home since yesterday evening.</p>
         <span class="note" data-i18n="wall.onlyYou">Only you can see this until the office approves it.</span>
       </div>
 
@@ -102,7 +108,7 @@
         <div class="spread">
           <div class="post-head">
             <span class="avatar avatar--lg avatar--sea" aria-hidden="true">OF</span>
-            <div><span class="post-author" data-i18n="wall.theOffice">The office</span><span class="post-time">[date]</span></div>
+            <div><span class="post-author" data-i18n="wall.theOffice">The office</span><span class="post-time" data-i18n="news.date">[date]</span></div>
           </div>
           <span class="pinned-label"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-pin"></use></svg><span data-i18n="wall.pinned">Pinned</span></span>
         </div>
@@ -128,10 +134,18 @@
           <div><span class="post-author" data-i18n="wall.ownerBlockX">[Owner name] · Block [X]</span><span class="post-time" data-i18n="wall.timeAgo">[time ago]</span></div>
         </div>
         <p class="post-text">Anyone fancy a Sunday morning walk along the promenade? I'll be at the main gate at 9:00. All welcome!</p>
-        <div class="photo-ph" data-i18n="wall.photo">[Owner photo]</div>
+        <div class="photo-ph" data-i18n="wall.photo">[Photo]</div>
         <div class="reply">
           <span class="strong" data-i18n="wall.ownerBlockY">[Owner name] · Block [Y]</span>
           <span class="body">Count me in. See you Sunday.</span>
+        </div>
+        <div class="reply reply--pending">
+          <span class="spread">
+            <span class="strong" data-i18n="wall.yourReply">Your reply</span>
+            <span class="pill pill--muted"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-clock"></use></svg><span data-i18n="wall.waiting">Waiting for review</span></span>
+          </span>
+          <span class="body">I'll join you too, thank you for organising it.</span>
+          <span class="note" data-i18n="wall.onlyYouReply">Only you can see this reply until the office approves it.</span>
         </div>
         <div class="post-actions">
           <button type="button" class="btn btn--ghost btn--sm btn--icon like-btn" aria-pressed="false" aria-label="Like" data-i18n-aria-label="wall.like"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
@@ -145,14 +159,19 @@
         <h2 class="h3" data-i18n="wall.guidelines">Wall guidelines</h2>
         <ul class="bullets">
           <li data-i18n="wall.rule1">Be kind and respectful to your neighbours.</li>
-          <li data-i18n="wall.rule2">No advertising or selling.</li>
-          <li data-i18n="wall.rule3">For maintenance issues, use the office chat.</li>
-          <li data-i18n="wall.rule4">The office reviews every post before it appears.</li>
+          <li data-i18n="wall.rule2">The wall is open to owners only.</li>
+          <li data-i18n="wall.rule3">No classifieds, sales or local business offers. They are outside the community's remit.</li>
+          <li data-i18n="wall.rule4">The office reviews every post and reply before it appears, and may decline anything offensive or unrelated to the community.</li>
         </ul>
       </div>
+      <div class="card card--tight">
+        <span class="eyebrow"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-mail"></use></svg><span data-i18n="wall.formalEyebrow">Not for formal requests</span></span>
+        <p class="body" data-i18n="wall.formalText">Formal complaints, incidents and works requests must be sent by email to admin@alcazababeach.com. Email is the only channel that opens a file the Board and the Administrator can act on.</p>
+        <a class="btn btn--outline btn--sm" href="mailto:admin@alcazababeach.com" data-i18n="info.emailOffice">Email the office</a>
+      </div>
       <div class="card card--sea card--tight">
-        <span class="eyebrow" data-i18n="wall.needOffice">Need the office?</span>
-        <p class="body" data-i18n="wall.needOfficeText">Ask a private question and get an answer straight away.</p>
+        <span class="eyebrow" data-i18n="wall.needOffice">Quick question?</span>
+        <p class="body" data-i18n="wall.needOfficeText">Ask the office in the chat and get an answer straight away.</p>
         <a class="btn btn--light" href="chat.html" data-i18n="wall.openChat">Open office chat</a>
       </div>
     </aside>
@@ -169,7 +188,9 @@
         <h2 class="footer-title" data-i18n="nav.label">Owners' area</h2>
         <ul>
           <li><a href="home.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="news.html" data-i18n="nav.news">News</a></li>
           <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+          <li><a href="information.html" data-i18n="nav.information">Information</a></li>
           <li><a href="chat.html" data-i18n="nav.chat">Office chat</a></li>
           <li><a href="community.html" data-i18n="nav.community">Community</a></li>
           <li><a href="account.html" data-i18n="common.account">Your account</a></li>
@@ -198,12 +219,14 @@
   <button type="button" class="tab-item" data-more-toggle aria-expanded="false" aria-controls="more-sheet"><span class="tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></span><span data-i18n="nav.more">More</span></button>
 </nav>
 <div class="more-sheet" id="more-sheet" hidden>
+  <a class="more-link" data-nav="news" href="news.html"><svg class="icon" aria-hidden="true"><use href="#i-news"></use></svg><span data-i18n="nav.news">News</span></a>
+  <a class="more-link" data-nav="information" href="information.html"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg><span data-i18n="nav.information">Information</span></a>
   <a class="more-link" data-nav="orders" href="coming-soon.html?page=orders"><svg class="icon" aria-hidden="true"><use href="#i-bag"></use></svg><span data-i18n="nav.orders">Orders</span></a>
   <a class="more-link" data-nav="account" href="account.html"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg><span data-i18n="common.account">Your account</span></a>
   <a class="more-link" href="coming-soon.html?page=app"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><span data-i18n="nav.app">Get the app</span></a>
   <a class="more-link" href="index.html"><svg class="icon" aria-hidden="true"><use href="#i-logout"></use></svg><span data-i18n="nav.signOut">Sign out</span></a>
 </div>
-<script src="assets/js/i18n.js?v=2026-10-20"></script>
-<script src="assets/js/app.js?v=2026-10-20"></script>
+<script src="assets/js/i18n.js?v=2026-11-13"></script>
+<script src="assets/js/app.js?v=2026-11-13"></script>
 </body>
 </html>

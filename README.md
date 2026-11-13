@@ -11,12 +11,14 @@ Live preview: https://patrick-munnelly.github.io/alcazaba-owner-preview/ (rebuil
 | File | Screen |
 | --- | --- |
 | `index.html` | Sign in |
-| `home.html` | Owner's home |
-| `documents.html` | Newsletters and AGM results (`?tab=agm` opens the AGM tab) |
+| `home.html` | Owner's home, with the latest news |
+| `news.html` | News: announcements from the Board and the office |
+| `documents.html` | Official documents, newsletters and AGM results (`?tab=newsletters` or `?tab=agm` opens those tabs) |
+| `information.html` | Office contacts and hours, community rules, bookings, lost and found, emergency numbers, the Board and the office team |
 | `chat.html` | Office chat (assistant first, office takes over) |
-| `community.html` | Community wall, moderated by the office |
-| `account.html` | Your account (template owner: John Doe, Block A · Apartment 12) |
-| `coming-soon.html` | Placeholder for screens not designed yet (`?page=orders`, `app`, `download`, `archive`, `conversation`, `forgot`, `password`) |
+| `community.html` | Community wall for owners: the office approves every post and reply before it appears |
+| `account.html` | Your account (template owner: John Doe, Block 12 · Apartment 12) |
+| `coming-soon.html` | Placeholder for screens not designed yet (`?page=orders`, `app`, `download`, `archive`, `conversation`, `forgot`, `password`, `news`, `newsarchive`) |
 
 ## Shared files
 
@@ -27,7 +29,8 @@ Live preview: https://patrick-munnelly.github.io/alcazaba-owner-preview/ (rebuil
 
 ## Notes
 
-- Pages are responsive: below 760px wide the header menu becomes a bottom tab bar.
+- Pages are responsive: at 1024px wide and below, the header menu becomes a bottom tab bar (News, Information, Orders and the account sit under "More").
+- Following the client's feedback on Luc's draft (November 2026): no fiscal or bank details, no private Board Wall, and no profiles for tenants (only owners have accounts). The community wall takes no classifieds, sales or local business offers. Formal complaints, incidents and works requests go by email to admin@alcazababeach.com; the office chat is for quick questions.
 - The office address, phone numbers and e-mail in the footer and on the sign-in page come from the website draft.
 - Cards fade in as they scroll into view, except for visitors who have reduced motion turned on.
 - The EN/ES choice is remembered across pages (and carried in the link as `?lang=es`).
