@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=2026-10-20">
+<link rel="stylesheet" href="assets/css/styles.css?v=2026-11-13">
 <title data-i18n="title.account">Your account · Alcazaba Beach owners' area</title>
 </head>
 <body data-page="account">
@@ -37,6 +37,10 @@
 <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
 <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
 <symbol id="i-logout" viewBox="0 0 24 24"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5M5 12h11"/></symbol>
+<symbol id="i-news" viewBox="0 0 24 24"><path d="M4 5h13v14a1 1 0 0 0 1 1H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v9a2 2 0 0 1-2 2"/><path d="M7.5 9h6M7.5 12.5h6M7.5 16h4"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17v.5"/></symbol>
 </svg>
 <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
 <header class="site-header">
@@ -46,8 +50,10 @@
     </a>
     <nav class="main-nav" aria-label="Owners' area" data-i18n-aria-label="nav.label">
       <a class="nav-link" data-nav="home" href="home.html" data-i18n="nav.home">Home</a>
+      <a class="nav-link" data-nav="news" href="news.html" data-i18n="nav.news">News</a>
       <a class="nav-link" data-nav="documents" href="documents.html" data-i18n="nav.documents">Documents</a>
-      <a class="nav-link" data-nav="chat" href="chat.html" data-i18n="nav.chat">Office chat</a>
+      <a class="nav-link" data-nav="information" href="information.html" data-i18n="nav.information">Information</a>
+      <a class="nav-link" data-nav="chat" href="chat.html" data-i18n="nav.chatShort">Chat</a>
       <a class="nav-link" data-nav="community" href="community.html" data-i18n="nav.community">Community</a>
       <a class="nav-link" data-nav="orders" href="coming-soon.html?page=orders" data-i18n="nav.orders">Orders</a>
     </nav>
@@ -67,7 +73,7 @@
     <div class="hero-person">
       <span class="avatar avatar--xl" aria-hidden="true">JD</span>
       <div class="hero-text">
-        <p class="hero-kicker" data-i18n="account.unit">Block A · Apartment 12 · Owner since 2019</p>
+        <p class="hero-kicker" data-i18n="account.unit">Block 12 · Apartment 12 · Owner since 2019</p>
         <h1 class="hero-title">John Doe</h1>
       </div>
     </div>
@@ -124,6 +130,7 @@
           <p class="body" data-i18n="account.notificationsText">Choose what the office emails you about.</p>
         </div>
         <div class="stack" style="gap: 0">
+          <label class="check"><input type="checkbox" checked><span data-i18n="account.nNews">News from the Board and the office</span></label>
           <label class="check"><input type="checkbox" checked><span data-i18n="account.nNewsletters">New newsletters</span></label>
           <label class="check"><input type="checkbox" checked><span data-i18n="account.nAgm">AGM notices and results</span></label>
           <label class="check"><input type="checkbox" checked><span data-i18n="account.nReplies">Replies from the office</span></label>
@@ -137,7 +144,7 @@
       <section class="card card--tight" aria-labelledby="property-title">
         <h2 class="h3" id="property-title" data-i18n="account.property">Your property</h2>
         <dl class="details">
-          <div><dt data-i18n="account.apartment">Apartment</dt><dd data-i18n="account.apartmentValue">Block A · No. 12</dd></div>
+          <div><dt data-i18n="account.apartment">Apartment</dt><dd data-i18n="account.apartmentValue">Block 12 · No. 12</dd></div>
           <div><dt data-i18n="account.type">Type</dt><dd data-i18n="account.typeValue">2 bedrooms · sea view</dd></div>
           <div><dt data-i18n="account.owners">Owners</dt><dd>John Doe, Jane Doe</dd></div>
           <div><dt data-i18n="account.since">Owner since</dt><dd data-i18n="account.sinceValue">March 2019</dd></div>
@@ -166,7 +173,9 @@
         <h2 class="footer-title" data-i18n="nav.label">Owners' area</h2>
         <ul>
           <li><a href="home.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="news.html" data-i18n="nav.news">News</a></li>
           <li><a href="documents.html" data-i18n="nav.documents">Documents</a></li>
+          <li><a href="information.html" data-i18n="nav.information">Information</a></li>
           <li><a href="chat.html" data-i18n="nav.chat">Office chat</a></li>
           <li><a href="community.html" data-i18n="nav.community">Community</a></li>
           <li><a href="account.html" data-i18n="common.account">Your account</a></li>
@@ -195,12 +204,14 @@
   <button type="button" class="tab-item" data-more-toggle aria-expanded="false" aria-controls="more-sheet"><span class="tab-icon"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></span><span data-i18n="nav.more">More</span></button>
 </nav>
 <div class="more-sheet" id="more-sheet" hidden>
+  <a class="more-link" data-nav="news" href="news.html"><svg class="icon" aria-hidden="true"><use href="#i-news"></use></svg><span data-i18n="nav.news">News</span></a>
+  <a class="more-link" data-nav="information" href="information.html"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg><span data-i18n="nav.information">Information</span></a>
   <a class="more-link" data-nav="orders" href="coming-soon.html?page=orders"><svg class="icon" aria-hidden="true"><use href="#i-bag"></use></svg><span data-i18n="nav.orders">Orders</span></a>
   <a class="more-link" data-nav="account" href="account.html"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg><span data-i18n="common.account">Your account</span></a>
   <a class="more-link" href="coming-soon.html?page=app"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><span data-i18n="nav.app">Get the app</span></a>
   <a class="more-link" href="index.html"><svg class="icon" aria-hidden="true"><use href="#i-logout"></use></svg><span data-i18n="nav.signOut">Sign out</span></a>
 </div>
-<script src="assets/js/i18n.js?v=2026-10-20"></script>
-<script src="assets/js/app.js?v=2026-10-20"></script>
+<script src="assets/js/i18n.js?v=2026-11-13"></script>
+<script src="assets/js/app.js?v=2026-11-13"></script>
 </body>
 </html>

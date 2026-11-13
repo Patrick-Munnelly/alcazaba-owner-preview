@@ -3,6 +3,7 @@
    - Tabs on the Documents page
    - "More" menu on phones
    - Like (heart) buttons on the community wall
+  - Highlighting the current page in the menus
    - Coming-soon page content
    - Header that turns white on scroll, and cards that fade in */
 (function () {
@@ -39,7 +40,9 @@
     download: { icon: 'i-download', title: 'Document download', text: 'On the live site this opens or downloads the PDF.' },
     archive: { icon: 'i-doc', title: 'Document archive', text: 'Older newsletters and AGM papers, organised by year.' },
     conversation: { icon: 'i-chat', title: 'Past conversation', text: 'Your earlier conversations with the office will open here.' },
-    forgot: { icon: 'i-user', title: 'Reset your password', text: 'Enter your email and we will send you a link to choose a new password.' }
+    forgot: { icon: 'i-user', title: 'Reset your password', text: 'Enter your email and we will send you a link to choose a new password.' },
+    news: { icon: 'i-news', title: 'News item', text: 'The full announcement opens here, with any documents attached to it.' },
+    newsarchive: { icon: 'i-news', title: 'News archive', text: 'Earlier announcements from the Board and the office, organised by year.' }
   };
 
   function setupComingSoon() {
@@ -251,6 +254,9 @@
     document.querySelectorAll('[data-nav]').forEach(function (el) {
       if (el.getAttribute('data-nav') === current) el.setAttribute('aria-current', 'page');
     });
+    // Pages reached through the phone "More" menu light up its button.
+    var toggle = document.querySelector('[data-more-toggle]');
+    if (toggle && document.querySelector('.more-link[aria-current="page"]')) toggle.classList.add('is-current');
   }
 
   /* ---------- Start ---------- */
