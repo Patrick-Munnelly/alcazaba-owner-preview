@@ -618,9 +618,9 @@ img, svg { display: block; }
 .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
 .field--wide { grid-column: 1 / -1; }
 .details { margin: 0; display: flex; flex-direction: column; }
-.details div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 11px 0; border-top: 1px solid var(--pale-deep); }
+.details div { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; padding: 11px 0; border-top: 1px solid var(--pale-deep); }
 .details div:first-child { border-top: 0; }
-.details dt { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-ink); align-self: center; }
+.details dt { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-ink); }
 .details dd { margin: 0; font-size: 0.95rem; font-weight: 600; }
 
 /* ---------- Narrower screens ---------- */
