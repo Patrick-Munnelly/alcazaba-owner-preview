@@ -255,7 +255,7 @@ window.ALCAZABA_I18N = {
     'info.reception': 'Recepción',
     'info.address': 'Dirección',
     'info.hoursTitle': 'Horarios',
-    'info.hoursValue': '[horario]',
+    'info.officeHours': 'De 10:00 a 14:00.',
     'info.pools': 'Piscinas',
     'info.courts': 'Tenis y pádel',
     'info.gym': 'Gimnasio',

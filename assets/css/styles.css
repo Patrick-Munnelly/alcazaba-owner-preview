@@ -523,7 +523,7 @@ img, svg { display: block; }
 }
 .callout strong { color: var(--ink); }
 .callout--side { background: var(--pale-deep); }
-.details.details--wide dd { font-weight: 400; color: var(--ink-soft); }
+.details.details--wide dd { flex-basis: 100%; font-weight: 400; color: var(--ink-soft); }
 .details .rule-ref { display: block; margin-top: 4px; }
 .details dd a { font-weight: 600; }
 .num-table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
