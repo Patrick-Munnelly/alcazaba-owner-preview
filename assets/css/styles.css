@@ -523,7 +523,8 @@ img, svg { display: block; }
 }
 .callout strong { color: var(--ink); }
 .callout--side { background: var(--pale-deep); }
-.details--wide dd { font-weight: 400; color: var(--ink-soft); }
+.details.details--wide dd { font-weight: 400; color: var(--ink-soft); }
+.details .rule-ref { display: block; margin-top: 4px; }
 .details dd a { font-weight: 600; }
 .num-table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
 .num-table th, .num-table td { padding: 14px 20px; text-align: left; vertical-align: top; border-top: 1px solid var(--pale-deep); }

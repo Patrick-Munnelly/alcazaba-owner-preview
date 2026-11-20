@@ -137,6 +137,11 @@
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
       btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
     });
+    // Documents that exist in both languages (e.g. the Internal regulations PDF).
+    document.querySelectorAll('a[data-href-es]').forEach(function (a) {
+      if (!a.hasAttribute('data-href-en')) a.setAttribute('data-href-en', a.getAttribute('href'));
+      a.setAttribute('href', a.getAttribute(lang === 'es' ? 'data-href-es' : 'data-href-en'));
+    });
     updateLinks(lang);
   }
 

@@ -14,7 +14,7 @@ Live preview: https://patrick-munnelly.github.io/alcazaba-owner-preview/ (rebuil
 | `home.html` | Owner's home, with the latest news |
 | `news.html` | News: announcements from the Board and the office |
 | `documents.html` | Official documents, newsletters and AGM results (`?tab=newsletters` or `?tab=agm` opens those tabs) |
-| `information.html` | Office contacts and hours, community rules, bookings, lost and found, emergency numbers, the Board and the office team |
+| `information.html` | Office contacts and opening hours, a summary of the community rules (linked to the Internal regulations PDF), lost and found, emergency numbers, the Board and the office team |
 | `chat.html` | Office chat (assistant first, office takes over) |
 | `community.html` | Community wall for owners: the office approves every post and reply before it appears |
 | `account.html` | Your account (template owner: John Doe, Block 12 · Apartment 12) |
@@ -25,6 +25,7 @@ Live preview: https://patrick-munnelly.github.io/alcazaba-owner-preview/ (rebuil
 - `assets/css/styles.css`: all styles. Colours and fonts are set once at the top under `:root`, taken from the website draft.
 - `assets/js/app.js`: language switch, Documents tabs, the phone "More" menu, the coming-soon page, the header that turns white on scroll and the cards that fade in.
 - `assets/img/al_beach_logo.png`: the Alcazaba Beach logo used in the header, the footer and on the sign-in page.
+- `assets/docs/`: the Internal regulations PDF in English (`internal-regulations-en.pdf`) and Spanish (`reglamento-regimen-interior-es.pdf`). Links with a `data-href-es` attribute switch to the Spanish file when the page is in Spanish.
 - `assets/js/i18n.js`: Spanish copy. English is written in the HTML; each translated element has a `data-i18n` key that matches an entry here.
 
 ## Notes
